@@ -10,11 +10,6 @@ const setReqGetVideoList = (categoryId, status = true) => ({
   payload: { categoryId, status }
 });
 
-const invalidateVideoList = (categoryId) => ({
-  type: 'INVALIDATE_VIDEO_LIST',
-  payload: { categoryId }
-});
-
 export const fetchVideoList = (categoryId = '0') => async (dispatch, getState) => {
   const { videoList } = getState();
   const list = videoList[categoryId] || { 

@@ -10,10 +10,6 @@ const setReqGetCategoryList = (status = true) => ({
   payload: { status }
 });
 
-const invalidateCategoryList = (categoryId) => ({
-  type: 'INVALIDATE_CATEGORY_LIST'
-});
-
 export const fetchCategoryList = (options = {}) => async (dispatch, getState) => {
   const { categoryList } = getState();
   

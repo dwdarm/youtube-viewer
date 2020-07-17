@@ -10,10 +10,6 @@ const setReqGetSearchVideoList = (keyword, status = true) => ({
   payload: { keyword, status }
 });
 
-const invalidateSearchVideoList = () => ({
-  type: 'INVALIDATE_SEARCH_VIDEO_LIST'
-});
-
 export const fetchSearchVideoList = (keyword = '') => async (dispatch, getState) => {
   const { searchVideoList } = getState();
   const list = searchVideoList.keyword === keyword 

@@ -10,10 +10,6 @@ const setReqGetVideos = (id, status = true) => ({
   payload: { id, status }
 });
 
-const invalidateVideos = () => ({
-  type: 'INVALIDATE_VIDEOS'
-});
-
 export const fetchVideo = (id) => async (dispatch, getState) => {
   const { videos } = getState();
   const video = videos[id] || { 

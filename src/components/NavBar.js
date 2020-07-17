@@ -23,11 +23,11 @@ const NavBar = () => {
       <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/"><strong>Youtube viewer</strong></Link>
-          <a role="button" className="navbar-burger burger" onClick={handleTriggerClick}>
+          <div className="navbar-burger burger" onClick={handleTriggerClick}>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </div>
         </div>
         <div ref={menuRef} className="navbar-menu">
           <div className="navbar-start">
