@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid hsl(0, 0%, 86%);
+  
+  .video-card-image {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    
+    .video-card-duration {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+  
+  .video-card-content {
+    padding: 1rem;
+    width: 100%;
+  }
+  
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .video-card {
+    flex-direction: row;
+    border-top: 0;
+  
+    .video-card-image {
+      width: 200px;
+    }
+  
+    .video-card-content {
+      padding: 0 1rem;
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .video-card {
+    border-top: 0;
+  
+    .video-card-content {
+      padding: 1rem 0;
+    }
+  }
+}
