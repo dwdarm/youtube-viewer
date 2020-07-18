@@ -28,7 +28,7 @@ export const fetchVideoList = (categoryId = '0') => async (dispatch, getState) =
       chart: 'mostPopular',
       maxResults: 10,
       videoCategoryId: categoryId,
-      pageToken: list.page ? list.page : undefined
+      pageToken: list.page ? list.page : ''
     });
     
     dispatch(addVideoList(categoryId, res));

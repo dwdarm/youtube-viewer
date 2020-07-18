@@ -1,12 +1,12 @@
-import buildUrl from 'build-url';
+import urlBuilder from '@dwdarm/url-builder';
 import { BASE_URL, API_KEY } from './config';
 
 const videoCategoriesApi = {
   
   async list(options = {}) {
-    const res = await fetch(buildUrl(BASE_URL, {
+    const res = await fetch(urlBuilder(BASE_URL, {
       path: 'videoCategories',
-      queryParams: { ...options, key: API_KEY }
+      query: { ...options, key: API_KEY }
     }));
     
     if (res.status !== 200) { throw new Error(); }

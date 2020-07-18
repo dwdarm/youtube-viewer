@@ -26,13 +26,6 @@ const Player = ({ videoId, video, isReqGet, dispatch }) => {
   return (
     <div>
     
-      <div className="iframe">
-        <iframe 
-          title={video.id}
-          src={`https://www.youtube.com/embed/${video.id}`}>
-        </iframe>
-      </div>
-    
       <header className="py-4">
         <h1 className="title is-5 is-spaced">{video.snippet.title}</h1>
         <p className="subtitle is-6 has-text-grey has-text-weight-normal">

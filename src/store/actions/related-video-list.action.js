@@ -28,7 +28,7 @@ export const fetchRelatedVideoList = (videoId) => async (dispatch, getState) => 
       type: 'video',
       relatedToVideoId: videoId,
       maxResults: 10,
-      pageToken: list.page ? list.page : undefined
+      pageToken: list.page ? list.page : ''
     });
     
     dispatch(addRelatedVideoList(videoId, res));

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.player-wrapper {
+  padding: 0;
+}
+
+@media screen and (min-width: 481px) {
+  .player-wrapper  {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+}
+
+

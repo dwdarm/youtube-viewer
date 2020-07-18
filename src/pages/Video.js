@@ -9,20 +9,31 @@ export default () => {
   
   return (
     <Layout>
-      <div className="section">
-        <div className="container">
+      <div className="container">
       
-          <div className="columns">
-            <div className="column is-8">
+        <div className="columns is-gapless">
+          <div className="column is-8">
+            <div className="player-wrapper">
+              <div className="iframe">
+                <iframe 
+                  title={id}
+                  src={`https://www.youtube.com/embed/${id}`}
+                  allowFullScreen="allowFullScreen">
+                </iframe>
+              </div>
+            </div>
+            <div className="px-5 py-5">
               <Player videoId={id}/>
             </div>
-            <div className="column">
+          </div>
+          <div className="column px-5 py-5">
+            <div className="px-5 py-5">
               <RelatedVideos videoId={id}/>
             </div>
           </div>
+        </div>
       
         </div>
-      </div>
     </Layout>
   );
 }

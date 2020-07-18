@@ -25,7 +25,7 @@ export const fetchSearchVideoList = (keyword = '') => async (dispatch, getState)
       type: 'video',
       q: keyword,
       maxResults: 10,
-      pageToken: list.page ? list.page : undefined
+      pageToken: list.page ? list.page : ''
     });
     
     dispatch(addSearchVideoList(keyword, res));
