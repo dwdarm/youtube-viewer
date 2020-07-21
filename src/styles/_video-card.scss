@@ -22,6 +22,12 @@
     width: 100%;
   }
   
+  .video-card-content > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -36,6 +42,12 @@
     .video-card-content {
       padding: 0 1rem;
       flex: 1;
+    }
+    
+    .video-card-content > p {
+      white-space: initial;
+      overflow: initial;
+      text-overflow: initial;
     }
   }
 }

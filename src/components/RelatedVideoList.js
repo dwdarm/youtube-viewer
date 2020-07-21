@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LinesEllipsis from 'react-lines-ellipsis';
 
 const VideoList = ({ data }) => (
   <div className="columns is-multiline">
@@ -19,27 +18,14 @@ const VideoList = ({ data }) => (
             </figure>
           </div>
           <div className="column is-half">
-            <h3>
-              <Link 
-                className="subtitle is-6 has-text-black" to={`/video/${e.id}`}>
-                <LinesEllipsis
-                  text={e.snippet.title}
-                  className="mb-2"
-                  maxLine='2'
-                  ellipsis='...'
-                  trimRight
-                  basedOn='letters'
-                />
+            <p className="text-clipped mb-2">
+              <Link className="subtitle is-6 has-text-black" to={`/video/${e.id}`}>
+                {e.snippet.title}
               </Link>
-              <LinesEllipsis
-                className="is-size-7 has-text-grey"
-                text={e.snippet.channelTitle}
-                maxLine='1'
-                ellipsis='...'
-                trimRight
-                basedOn='letters'
-              />
-            </h3>
+            </p>
+            <p className="text-clipped is-size-7 has-text-grey">
+              {e.snippet.channelTitle}
+            </p>
           </div>
           
         </article>

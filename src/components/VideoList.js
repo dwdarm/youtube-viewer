@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LinesEllipsis from 'react-lines-ellipsis';
 import numFormat from '@dwdarm/num-format/src/num-format';
 import Skeleton from 'react-loading-skeleton';
 
@@ -33,45 +32,28 @@ const VideoCard = ({ video }) => (
     </div>
           
     <div className="video-card-content">
-      <h3>
         {video
-          ? <Link 
-              className="subtitle is-6 has-text-black" to={`/video/${video.id}`}>
-              <LinesEllipsis
-                text={video.snippet.title}
-                className="mb-2"
-                maxLine='2'
-                ellipsis='...'
-                trimRight
-                basedOn='letters'
-              />
-            </Link>
+          ? <p className="mb-2">
+              <Link 
+                className="subtitle is-6 has-text-black" to={`/video/${video.id}`}>
+                {video.snippet.title}
+              </Link>
+            </p>
           : <Skeleton />
         }
-      </h3>
       <>
         {video
-          ? <LinesEllipsis
-              className="is-size-7 has-text-grey"
-              text={video.snippet.channelTitle}
-              maxLine='1'
-              ellipsis='...'
-              trimRight
-              basedOn='letters'
-            />
+          ? <p className="is-size-7 has-text-grey">
+              {video.snippet.channelTitle}
+            </p>
           : <Skeleton />
         }
       </>
       <>
         {video && video.statistics
-          ? <LinesEllipsis
-              className="is-size-7 has-text-grey"
-              text={`${numFormat(video.statistics.viewCount, { format })} views`}
-              maxLine='1'
-              ellipsis='...'
-              trimRight
-              basedOn='letters'
-            />
+          ? <p className="is-size-7 has-text-grey">
+              {`${numFormat(video.statistics.viewCount, { format })} views`}
+            </p>
           : null
         }
       </>

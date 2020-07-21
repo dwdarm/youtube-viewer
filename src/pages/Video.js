@@ -26,7 +26,7 @@ export default () => {
               <Player videoId={id}/>
             </div>
           </div>
-          <div className="column px-5 py-5">
+          <div className="column is-4 px-5 py-5">
             <div className="px-5 py-5">
               <RelatedVideos videoId={id}/>
             </div>
